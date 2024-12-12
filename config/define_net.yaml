@@ -1,0 +1,33 @@
+# config.yaml
+model:
+  config_file: "segformer_mit-b2_8xb1-160k_cityscapes-1024x1024" 
+  weights_file: "/home/vinicius/ros2_ws/src/image_processor/Models&Configs/segformer_mit-b2_8x1_1024x1024_160k_cityscapes_20211207_134205-6096669a.pth"
+output: 
+  input_images_dir: "/home/vinicius/ros2_ws/src/image_processor/processed_images"
+  out_dir: "/home/vinicius/ros2_ws/src/image_processor/masks_images"
+  vis_dir: "/home/vinicius/ros2_ws/src/image_processor/masks_images/vis"
+  pred_dir: "/home/vinicius/ros2_ws/src/image_processor/masks_images/pred"
+
+
+# """Model Options:
+
+# - deeplabv3_r50-d8_4xb2-40k_cityscapes-512x1024
+# - segformer_mit-b2_8xb1-160k_cityscapes-1024x1024
+# - pspnet_r50-d8_4xb2-40k_cityscapes-512x1024
+# - fcn_r50-d8_4xb2-40k_cityscapes-512x1024
+# - fcn_r18-d8_4xb2-80k_cityscapes-512x1024
+# - fpn_r50_4xb2-80k_cityscapes-512x1024
+# - 
+
+# Respectives config files:
+
+# - /home/vinicius/ros2_ws/src/image_processor/Models&Configs/deeplabv3_r50-d8_512x1024_40k_cityscapes_20200605_022449-acadc2f8.pth
+# - /home/vinicius/ros2_ws/src/image_processor/Models&Configs/segformer_mit-b2_8x1_1024x1024_160k_cityscapes_20211207_134205-6096669a.pth
+# - /home/vinicius/ros2_ws/src/image_processor/Models&Configs/pspnet_r50-d8_512x1024_40k_cityscapes_20200605_003338-2966598c.pth
+# - /home/vinicius/ros2_ws/src/image_processor/Models&Configs/fcn_r50-d8_512x1024_40k_cityscapes_20200604_192608-efe53f0d.pth
+# - /home/vinicius/ros2_ws/src/image_processor/Models&Configs/fcn_r18-d8_512x1024_80k_cityscapes_20201225_021327-6c50f8b4.pth
+# - /home/vinicius/ros2_ws/src/image_processor/Models&Configs/fpn_r50_512x1024_80k_cityscapes_20200717_021437-94018a0d.pth"
+# - 
+# """
+
+
