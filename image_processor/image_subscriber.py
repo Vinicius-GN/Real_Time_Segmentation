@@ -7,6 +7,7 @@ import cv2
 import os
 import yaml
 from mmseg.apis import MMSegInferencer
+from mmseg.evaluation.metrics import CityscapesMetric
 import time
 
 global resultado
@@ -57,9 +58,7 @@ class ImageSubscriber(Node):
         os.makedirs(vis_dir, exist_ok=True)
         os.makedirs(pred_dir, exist_ok=True)
         
-        if(1):
-            print(cv_image)
-            
+        try:
             resultado = self.inferencer(
                 cv_image,  
                 out_dir=output_dir,
@@ -69,17 +68,16 @@ class ImageSubscriber(Node):
             )
             self.get_logger().info(f"Inference completed for image: {input_image_path}")
 
-            # time.sleep(3)
             #publish confirmation
             confirmation_msg = Bool()
             confirmation_msg.data = True
             self.publisher_.publish(confirmation_msg)
             self.get_logger().info(f"Published processing confirmation for image: {self.image_index}")
 
-        # except Exception as e:
-        #     # sla = CityscapesMetric(output_dir=output_dir, keep_results=True)
-        #     # sla.compute_metrics(resultado)
-        #     self.get_logger().error(f"Error during inference: {str(e)}")
+        except Exception as e:
+            # metrics = CityscapesMetric(output_dir=output_dir, keep_results=True)
+            # metrics.compute_metrics(resultado)
+            self.get_logger().error(f"Error during inference: {str(e)}")
 
 
         self.image_index += 1
