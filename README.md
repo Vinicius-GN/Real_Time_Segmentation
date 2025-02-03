@@ -6,12 +6,28 @@ Este projeto permite o processamento de imagens em tempo real para aplicações 
 </p>
 
 <p align="center">
-  <img src="caminho_para_a_imagem_do_modelo" alt="Arquitetura do SegFormer B2" width="600">
+  <a href="#1-introdução-e-objetivo-">Introdução e Objetivo</a> ·
+  <a href="#2-ferramentas-utilizadas-">Ferramentas Utilizadas</a> ·
+  <a href="#3-estrutura-do-projeto"->Estrutura do Projeto</a> ·
+  <a href="#4-instalação-e-uso-">Instalação e Uso</a> ·
+  <a href="#5-informações-do-modelo-segformer-b2-">Informações do Modelo</a> ·
+  <a href="#6-dataset-utilizado-">Dataset Utilizado</a> ·
+  <a href="#7-comparação-de-resultados-">Comparação de Resultados</a> ·
+  <a href="#8-como-contribuir-">Como Contribuir</a> ·
+  <a href="#9-licença-">Licença</a> ·
+  <a href="#10-agradecimentos-">Agradecimentos</a>
+</p>
+
+
+
+
+<p align="center">
+  <img src="Images/main.png" alt="Arquitetura do SegFormer B2" width="600">
 </p>  
 
 ---
 
-## 📌 1. Introdução e Objetivo  
+## 1. Introdução e Objetivo 📊
 
 A segmentação semântica em tempo real desempenha um papel **crítico** na navegação de veículos autônomos. O **módulo de percepção** desses veículos precisa interpretar rapidamente o ambiente ao seu redor para garantir **segurança, eficiência e tomada de decisões autônoma**.  
   
@@ -33,7 +49,7 @@ A integração do **SegFormer B2** com **ROS2** possibilita a segmentação efic
 ---
 
 
-## 🛠️ 2. Ferramentas Utilizadas  
+## 2. Ferramentas Utilizadas 🛠
 
 Este projeto utiliza as seguintes tecnologias:  
 
@@ -51,7 +67,7 @@ Este projeto utiliza as seguintes tecnologias:
 
 ---
 
-## 📂 3. Estrutura do Projeto  
+## 3. Estrutura do Projeto 📂
 
 
 📁 **Segmentation_MMseg-ROS2-main/**  
@@ -76,7 +92,7 @@ Este projeto utiliza as seguintes tecnologias:
 
 ---
 
-## ⚙️ 4. Instalação e Uso  
+## 4. Instalação e Uso ⚙️
 
 ### 🔹 Pré-requisitos  
 - Python **3.8+**  
@@ -136,14 +152,14 @@ ros2 run image_processor image_subscriber.py
 
 ---
 
-## 📊 5. Informações do Modelo **SegFormer B2**  
+## 5. Informações do Modelo **SegFormer B2** 📊
 
 O **SegFormer B2** é um modelo avançado de segmentação semântica, desenvolvido pela **NVIDIA**, projetado para capturar e interpretar informações visuais com alta precisão e eficiência computacional.  
 
 ### 🖥️ **Arquitetura do SegFormer B2**  
 
 <p align="center">
-  <img src="caminho_para_a_imagem_do_modelo" alt="Arquitetura do SegFormer B2" width="600">
+  <img src="Images/segformer_architecture.png" alt="Arquitetura do SegFormer B2" width="600">
 </p>  
 
 - **Transformers Hierárquicos** → Capturam diferentes níveis de detalhes da imagem, permitindo uma segmentação precisa em múltiplas escalas.  
@@ -163,7 +179,7 @@ Mais detalhes podem ser encontrados na **[documentação oficial do SegFormer](h
 
 ---
 
-## 🏙️ 6. Dataset Utilizado  
+## 6. Dataset Utilizado 🏙️
 
 📌 O projeto utiliza por padrão o dataset **Cityscapes**, que contém imagens de ruas urbanas anotadas para segmentação.  
 
@@ -177,7 +193,7 @@ Para utilizar outro dataset, basta alterar os arquivos de configuração e anota
 
 ---
 
-## 📊 7. Comparação de Resultados  
+## 7. Comparação de Resultados 📊
 
 A segmentação semântica em tempo real é um fator **crítico** para aplicações como **veículos autônomos e robótica**, onde o tempo de resposta e a precisão são essenciais para uma navegação segura. Para avaliar o desempenho dos diferentes modelos, comparamos **FPS de inferência, tempo médio por imagem, consumo computacional (FLOPs) e precisão**.
 
@@ -189,7 +205,7 @@ Abaixo, apresentamos os **resultados obtidos** na segmentação de imagens utili
 
 | 📷 Entrada |  🎨 Ground Truth | 🎨 Segmentação - SegFormer B2 | 🎨 Segmentação - DeepLabV3 |
 |-----------|-----------------------------|--------------------------|----------------------|
-| ![Input Image](images_source/000000001.png) | ![SegFormer](masks_images/segmented_segformer.png) | ![DeepLabV3](masks_images/segmented_deeplabv3.png) | ![PSPNet](masks_images/segmented_pspnet.png) |
+| ![Input Image](Images/img.png) | ![SegFormer](Images/groundT.png) | ![DeepLabV3](Images/Segformer.png) | ![PSPNet](Images/dlv3.png) |
 
 📌 **Observação:** As diferenças entre os modelos podem ser notadas na suavização dos contornos, detalhamento das bordas e segmentação precisa de classes menores.
 
@@ -222,7 +238,7 @@ Abaixo, apresentamos os **resultados obtidos** na segmentação de imagens utili
 
 ---
 
-## 🤝 8. Como Contribuir?  
+## 8. Como Contribuir? 🤝
 
 Contribuições são sempre bem-vindas!
 
@@ -230,7 +246,7 @@ Contribuições são sempre bem-vindas!
 
 ---
 
-## 📜 9. Licença  
+## 9. Licença 📜
 
 Este projeto é distribuído sob a **Licença MIT**, permitindo uso, modificação e distribuição livremente, desde que os devidos créditos sejam mantidos.  
 
@@ -238,7 +254,7 @@ Este projeto é distribuído sob a **Licença MIT**, permitindo uso, modificaç�
 
 ---
 
-## 🙏 10. Agradecimentos  
+## 10. Agradecimentos 🙏
 
 Gostaríamos de expressar nosso profundo agradecimento ao **Laboratório de Robótica Móvel (LRM) do ICMC-USP** pelo suporte e infraestrutura fornecidos para o desenvolvimento deste projeto.  
 
