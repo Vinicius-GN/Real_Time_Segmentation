@@ -256,5 +256,5 @@ Este projeto é distribuído sob a **Licença MIT**, permitindo uso, modificaç�
 
 ## 10. Agradecimentos 🙏
 
-Gostaríamos de expressar nosso profundo agradecimento ao **Laboratório de Robótica Móvel (LRM) do ICMC-USP** pelo suporte e infraestrutura fornecidos para o desenvolvimento deste projeto.  
+Gostaria de expressar o meu profundo agradecimento ao **Laboratório de Robótica Móvel (LRM) do ICMC-USP** pelo suporte e infraestrutura fornecidos para o desenvolvimento deste projeto.  
 
